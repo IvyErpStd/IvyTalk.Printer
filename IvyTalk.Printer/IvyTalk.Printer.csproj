@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39395641-B54C-4881-8920-E7A71173A910}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IvyTalk.Printer</RootNamespace>
+    <AssemblyName>IvyTalk.Printer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Any CPU|AnyCPU' ">
+    <OutputPath>bin\Any CPU\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net40\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net40\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Label\Controls\ChangeField.cs" />
+    <Compile Include="Label\Controls\ChangeField.Designer.cs">
+      <DependentUpon>ChangeField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\ChangePrintArea.cs" />
+    <Compile Include="Label\Controls\ChangePrintArea.Designer.cs">
+      <DependentUpon>ChangePrintArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\EditBorder.cs" />
+    <Compile Include="Label\Controls\EditBorder.Designer.cs">
+      <DependentUpon>EditBorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\EditGrid.cs" />
+    <Compile Include="Label\Controls\EditGrid.Designer.cs">
+      <DependentUpon>EditGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\GridStyleInfo.cs" />
+    <Compile Include="Label\Controls\IBorderable.cs" />
+    <Compile Include="Label\Controls\IChangeAreaAble.cs" />
+    <Compile Include="Label\Controls\IChangeField.cs" />
+    <Compile Include="Label\Controls\IChangePrintArea.cs" />
+    <Compile Include="Label\Controls\IColorable.cs" />
+    <Compile Include="Label\Controls\IContextable.cs" />
+    <Compile Include="Label\Controls\IContextAlignAble.cs" />
+    <Compile Include="Label\Controls\IDeleteable.cs" />
+    <Compile Include="Label\Controls\IDesign.cs" />
+    <Compile Include="Label\Controls\IEditBorder.cs" />
+    <Compile Include="Label\Controls\IEditGrid.cs" />
+    <Compile Include="Label\Controls\IFieldAble.cs" />
+    <Compile Include="Label\Controls\IFontable.cs" />
+    <Compile Include="Label\Controls\IFormatable.cs" />
+    <Compile Include="Label\Controls\IGridable.cs" />
+    <Compile Include="Label\Controls\IImageAble.cs" />
+    <Compile Include="Label\Controls\IInput.cs" />
+    <Compile Include="Label\Controls\IInputSize.cs" />
+    <Compile Include="Label\Controls\InputFormatString.cs" />
+    <Compile Include="Label\Controls\InputFormatString.Designer.cs">
+      <DependentUpon>InputFormatString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\InputSizeForPage.cs" />
+    <Compile Include="Label\Controls\InputSizeForPage.Designer.cs">
+      <DependentUpon>InputSizeForPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\InputString.cs" />
+    <Compile Include="Label\Controls\InputString.Designer.cs">
+      <DependentUpon>InputString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\IPrintObject.cs" />
+    <Compile Include="Label\Controls\ISelectContextAlign.cs" />
+    <Compile Include="Label\Controls\ISetGridStyle.cs" />
+    <Compile Include="Label\Controls\ISizeable.cs" />
+    <Compile Include="Label\Controls\PrintObject1.cs" />
+    <Compile Include="Label\Controls\PrintObject1.Designer.cs">
+      <DependentUpon>PrintObject1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\PrintObject2.cs" />
+    <Compile Include="Label\Controls\PrintObject2.Designer.cs">
+      <DependentUpon>PrintObject2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\PrintObject3.cs" />
+    <Compile Include="Label\Controls\PrintObject3.Designer.cs">
+      <DependentUpon>PrintObject3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\PrintObject4.cs" />
+    <Compile Include="Label\Controls\PrintObject4.Designer.cs">
+      <DependentUpon>PrintObject4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\PrintObject5.cs" />
+    <Compile Include="Label\Controls\PrintObject5.Designer.cs">
+      <DependentUpon>PrintObject5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\PrintObject6.cs" />
+    <Compile Include="Label\Controls\PrintObject6.Designer.cs">
+      <DependentUpon>PrintObject6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\PrintObject7.cs" />
+    <Compile Include="Label\Controls\PrintObject7.Designer.cs">
+      <DependentUpon>PrintObject7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\PrintObject8.cs" />
+    <Compile Include="Label\Controls\PrintObject8.Designer.cs">
+      <DependentUpon>PrintObject8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\SelectContextAlign.cs" />
+    <Compile Include="Label\Controls\SelectContextAlign.Designer.cs">
+      <DependentUpon>SelectContextAlign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Controls\SetGridStyle.cs" />
+    <Compile Include="Label\Controls\SetGridStyle.Designer.cs">
+      <DependentUpon>SetGridStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label\Helper\Barcode.cs" />
+    <Compile Include="Label\Helper\Conv.cs" />
+    <Compile Include="Label\Helper\DrawDetailDefault.cs" />
+    <Compile Include="Label\Helper\DrawDetailJH.cs" />
+    <Compile Include="Label\Helper\IDrawDetail.cs" />
+    <Compile Include="Label\Helper\OperRecord.cs" />
+    <Compile Include="Label\Helper\PrintObjectHelper.cs" />
+    <Compile Include="Label\Helper\PrintObjectMouse.cs" />
+    <Compile Include="Label\Helper\QRCode.cs" />
+    <Compile Include="Label\Helper\ReadXml.cs" />
+    <Compile Include="Label\Helper\StringBuilderForXML.cs" />
+    <Compile Include="Label\IBLL\IPar.cs" />
+    <Compile Include="Label\IBLL\IPrint.cs" />
+    <Compile Include="Label\PrintD.cs" />
+    <Compile Include="Label\PrintP.cs" />
+    <Compile Include="Label\PrintV.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Paper\Controls\ChangeField.cs" />
+    <Compile Include="Paper\Controls\ChangeField.Designer.cs">
+      <DependentUpon>ChangeField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\DesignPanel.cs" />
+    <Compile Include="Paper\Controls\EditBorder.cs" />
+    <Compile Include="Paper\Controls\EditBorder.Designer.cs">
+      <DependentUpon>EditBorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\EditGrid.cs" />
+    <Compile Include="Paper\Controls\EditGrid.Designer.cs">
+      <DependentUpon>EditGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\FieldList.cs" />
+    <Compile Include="Paper\Controls\GridStyleInfo.cs" />
+    <Compile Include="Paper\Controls\IBorderable.cs" />
+    <Compile Include="Paper\Controls\IChangeAreaAble.cs" />
+    <Compile Include="Paper\Controls\IChangeField.cs" />
+    <Compile Include="Paper\Controls\IColorable.cs" />
+    <Compile Include="Paper\Controls\IContextable.cs" />
+    <Compile Include="Paper\Controls\IContextAlignAble.cs" />
+    <Compile Include="Paper\Controls\IDeleteable.cs" />
+    <Compile Include="Paper\Controls\IDesign.cs" />
+    <Compile Include="Paper\Controls\IEditBorder.cs" />
+    <Compile Include="Paper\Controls\IEditGrid.cs" />
+    <Compile Include="Paper\Controls\IFieldAble.cs" />
+    <Compile Include="Paper\Controls\IFontable.cs" />
+    <Compile Include="Paper\Controls\IFormatable.cs" />
+    <Compile Include="Paper\Controls\IGridable.cs" />
+    <Compile Include="Paper\Controls\IImageAble.cs" />
+    <Compile Include="Paper\Controls\IInput.cs" />
+    <Compile Include="Paper\Controls\IInputSize.cs" />
+    <Compile Include="Paper\Controls\InputFormatString.cs" />
+    <Compile Include="Paper\Controls\InputFormatString.Designer.cs">
+      <DependentUpon>InputFormatString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\InputSizeForPage.cs" />
+    <Compile Include="Paper\Controls\InputSizeForPage.Designer.cs">
+      <DependentUpon>InputSizeForPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\InputString.cs" />
+    <Compile Include="Paper\Controls\InputString.Designer.cs">
+      <DependentUpon>InputString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\IPrintObject.cs" />
+    <Compile Include="Paper\Controls\ISelectContextAlign.cs" />
+    <Compile Include="Paper\Controls\ISizeable.cs" />
+    <Compile Include="Paper\Controls\MyPanel.cs" />
+    <Compile Include="Paper\Controls\PrintObject1.cs" />
+    <Compile Include="Paper\Controls\PrintObject1.Designer.cs">
+      <DependentUpon>PrintObject1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\PrintObject2.cs" />
+    <Compile Include="Paper\Controls\PrintObject2.Designer.cs">
+      <DependentUpon>PrintObject2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\PrintObject3.cs" />
+    <Compile Include="Paper\Controls\PrintObject3.Designer.cs">
+      <DependentUpon>PrintObject3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\PrintObject4.cs" />
+    <Compile Include="Paper\Controls\PrintObject4.Designer.cs">
+      <DependentUpon>PrintObject4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\PrintObject5.cs" />
+    <Compile Include="Paper\Controls\PrintObject5.Designer.cs">
+      <DependentUpon>PrintObject5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\PrintObject6.cs" />
+    <Compile Include="Paper\Controls\PrintObject6.Designer.cs">
+      <DependentUpon>PrintObject6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\PrintObject7.cs" />
+    <Compile Include="Paper\Controls\PrintObject7.Designer.cs">
+      <DependentUpon>PrintObject7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\PrintObject8.cs" />
+    <Compile Include="Paper\Controls\PrintObject8.Designer.cs">
+      <DependentUpon>PrintObject8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Controls\SelectContextAlign.cs" />
+    <Compile Include="Paper\Controls\SelectContextAlign.Designer.cs">
+      <DependentUpon>SelectContextAlign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper\Helper\Barcode.cs" />
+    <Compile Include="Paper\Helper\Conv.cs" />
+    <Compile Include="Paper\Helper\OperRecord.cs" />
+    <Compile Include="Paper\Helper\PrintObjectHelper.cs" />
+    <Compile Include="Paper\Helper\PrintObjectMouse.cs" />
+    <Compile Include="Paper\Helper\QRCode.cs" />
+    <Compile Include="Paper\Helper\ReadXml.cs" />
+    <Compile Include="Paper\Helper\StringBuilderForXML.cs" />
+    <Compile Include="Paper\IBLL\IPrint.cs" />
+    <Compile Include="Paper\PrintD.cs" />
+    <Compile Include="Paper\PrintP.cs" />
+    <Compile Include="Paper\PrintV.cs" />
+    <EmbeddedResource Include="Label\Controls\ChangeField.resx">
+      <DependentUpon>ChangeField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\ChangePrintArea.resx">
+      <DependentUpon>ChangePrintArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\EditBorder.resx">
+      <DependentUpon>EditBorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\EditGrid.resx">
+      <DependentUpon>EditGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\InputFormatString.resx">
+      <DependentUpon>InputFormatString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\InputSizeForPage.resx">
+      <DependentUpon>InputSizeForPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\InputString.resx">
+      <DependentUpon>InputString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\PrintObject1.resx">
+      <DependentUpon>PrintObject1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\PrintObject2.resx">
+      <DependentUpon>PrintObject2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\PrintObject3.resx">
+      <DependentUpon>PrintObject3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\PrintObject4.resx">
+      <DependentUpon>PrintObject4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\PrintObject5.resx">
+      <DependentUpon>PrintObject5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\PrintObject6.resx">
+      <DependentUpon>PrintObject6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\PrintObject7.resx">
+      <DependentUpon>PrintObject7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\PrintObject8.resx">
+      <DependentUpon>PrintObject8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\SelectContextAlign.resx">
+      <DependentUpon>SelectContextAlign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\Controls\SetGridStyle.resx">
+      <DependentUpon>SetGridStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\PrintD.resx">
+      <DependentUpon>PrintD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label\PrintV.resx">
+      <DependentUpon>PrintV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Paper\Controls\ChangeField.resx">
+      <DependentUpon>ChangeField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\DesignPanel.resx">
+      <DependentUpon>DesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\EditBorder.resx">
+      <DependentUpon>EditBorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\EditGrid.resx">
+      <DependentUpon>EditGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\FieldList.resx">
+      <DependentUpon>FieldList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\InputFormatString.resx">
+      <DependentUpon>InputFormatString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\InputSizeForPage.resx">
+      <DependentUpon>InputSizeForPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\InputString.resx">
+      <DependentUpon>InputString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\PrintObject1.resx">
+      <DependentUpon>PrintObject1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\PrintObject2.resx">
+      <DependentUpon>PrintObject2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\PrintObject3.resx">
+      <DependentUpon>PrintObject3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\PrintObject4.resx">
+      <DependentUpon>PrintObject4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\PrintObject5.resx">
+      <DependentUpon>PrintObject5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\PrintObject6.resx">
+      <DependentUpon>PrintObject6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\PrintObject7.resx">
+      <DependentUpon>PrintObject7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\PrintObject8.resx">
+      <DependentUpon>PrintObject8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\Controls\SelectContextAlign.resx">
+      <DependentUpon>SelectContextAlign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\PrintD.resx">
+      <DependentUpon>PrintD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paper\PrintV.resx">
+      <DependentUpon>PrintV.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

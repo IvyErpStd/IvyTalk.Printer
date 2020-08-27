@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IvyTalk.Printer", "IvyTalk.Printer\IvyTalk.Printer.csproj", "{39395641-B54C-4881-8920-E7A71173A910}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B810B95C-6D99-4372-B755-2101B874B8ED}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39395641-B54C-4881-8920-E7A71173A910}.Any CPU|Any CPU.ActiveCfg = Any CPU|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Any CPU|Any CPU = Any CPU|Any CPU
 	EndGlobalSection
 EndGlobal
