@@ -9,7 +9,7 @@ using IvyTalk.Printer.Label.Helper;
 
 namespace IvyTalk.Printer.Label
 {
-    public class PrintD : Form, IBLL.IPrint, IDesign 
+    public class PrintD : Form, IBLL.IPrint, IDesign
     {
         private System.Data.DataTable tbmain;
         private Panel panel2;
